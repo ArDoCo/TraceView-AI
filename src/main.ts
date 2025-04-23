@@ -36,7 +36,6 @@ export async function load(url: string): Promise<string> {
  * @param titlePanel the HTLMElement to add the title to
  */
 function writeTitle(titlePanel: HTMLElement) {
-  const title = "ArDoCo Trace View (TeaStore GPT-4o)";
   const titleSpan = document.createElement("span");
 
   const ardocoSpan = document.createElement("span");
@@ -45,7 +44,7 @@ function writeTitle(titlePanel: HTMLElement) {
   ardocoSpan.style.color = STYLE.getArdocoColor();
 
   const traceViewSpan = document.createElement("span");
-  traceViewSpan.innerHTML = " Trace View";
+  traceViewSpan.innerHTML = " Trace View (TeaStore GPT-4o)";
 
   titleSpan.appendChild(ardocoSpan);
   titleSpan.appendChild(traceViewSpan);
