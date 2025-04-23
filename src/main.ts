@@ -36,7 +36,7 @@ export async function load(url: string): Promise<string> {
  * @param titlePanel the HTLMElement to add the title to
  */
 function writeTitle(titlePanel: HTMLElement) {
-  const title = "ArDoCo Trace View";
+  const title = "ArDoCo Trace View (TeaStore GPT-4o)";
   const titleSpan = document.createElement("span");
 
   const ardocoSpan = document.createElement("span");
@@ -100,7 +100,7 @@ async function init(fileManager: FileManager) {
   const middle = document.getElementById("middle")!;
   middle.style.backgroundColor = STYLE.getBackgroundColor();
   const urlPrefix =
-    "https://raw.githubusercontent.com/ArDoCo/Benchmark/main/teastore/";
+    "https://raw.githubusercontent.com/ArDoCo/TraceView-AI/main/result-ai/";
   function truncateId(id: string): string {
     const sep = "tools/descartes/"; // TODO: don't hardcode this
     return id.indexOf(sep) == -1 ? id : id.substring(id.indexOf(sep));
@@ -124,7 +124,7 @@ async function init(fileManager: FileManager) {
   );
   fileManager.addTextFile(
     "teastore.uml",
-    await load(urlPrefix + "model_2020/uml/teastore.uml"),
+    await load(urlPrefix + "model_generated/uml/teastore.uml"),
   );
   fileManager.addTextFile(
     "codeModel.acm",
