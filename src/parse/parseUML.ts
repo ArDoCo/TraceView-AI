@@ -193,55 +193,22 @@ export function parseUML(content: string): UMLModel {
       const operations: { identifier: string; name: string }[] = [];
       let attributes: Map<string, string> = new Map<string, string>();
       i++;
-      while (tokens[i].type != TokenType.OPEN) {
+      console.log("Next token: " + tokens[i].value + " type: " + tokens[i].type);
+      while (tokens[i].type == TokenType.ATTRIBUTE) {
         let key = tokens[i].value.split("=")[0];
         let value = tokens[i].value.split("=")[1];
         if (key == undefined || value == undefined) {
-          throw new Error(
+           throw new Error(
             "Could not parse key or value for attribute: " +
               tokens[i].value +
               " at index " +
               i,
-          );
+          )
+          ;
         }
+        console.log("Key: " + key + " Value: " + value);
         attributes.set(key, value.substring(1, value.length - 1));
         i++;
-      }
-      while (tokens[i].type != TokenType.CLOSE) {
-        if (
-          tokens[i].type == TokenType.OPEN &&
-          tokens[i].value.startsWith("<ownedOperation")
-        ) {
-          i++;
-          let newIndexAndResult = parseOwnedOperation(tokens, i);
-          i = newIndexAndResult[0];
-          operations.push(newIndexAndResult[1]);
-        } else if (
-          tokens[i].type == TokenType.OPEN &&
-          tokens[i].value.startsWith("<interfaceRealization")
-        ) {
-          i++;
-          let newIndexAndResult = parseInterfaceRealization(tokens, i);
-          i = newIndexAndResult[0];
-          interfaceRealizations.push(newIndexAndResult[1]);
-        } else if (
-          tokens[i].type == TokenType.OPEN &&
-          tokens[i].value.startsWith("<packagedElement")
-        ) {
-          i++;
-          let newIndexAndResult = parseUsage(tokens, i);
-          i = newIndexAndResult[0];
-          usages.push(newIndexAndResult[1]);
-        } else {
-          throw new Error(
-            "Unexpected token: " +
-              tokens[i].type +
-              " (" +
-              tokens[i].value +
-              ") at index " +
-              i,
-          );
-        }
       }
       const type = attributes.get("xmi:type");
       const identifier = attributes.get("xmi:id");
@@ -260,6 +227,7 @@ export function parseUML(content: string): UMLModel {
       }
       i++;
     } else {
+      /*
       throw new Error(
         "Unexpected tl token: " +
           tokens[i].type +
@@ -267,6 +235,14 @@ export function parseUML(content: string): UMLModel {
           tokens[i].value +
           ") at index " +
           i,
+      );*/
+      console.log(
+        "Unexpected tl token: " +
+          tokens[i].type +
+          " (" +
+          tokens[i].value +
+          ") at index " +
+          i
       );
     }
   }
