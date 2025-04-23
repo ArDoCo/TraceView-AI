@@ -19,7 +19,7 @@ export enum VisualizationType {
  */
 export class VisualizationFactory {
   protected static readonly NLVIS_TITLE = "Architecture Documentation";
-  protected static readonly UMLVIS_TITLE = "UML Component Diagram";
+  protected static readonly UMLVIS_TITLE = "LLM-extracted Component Names";
   protected static readonly CODEVIS_TITLE = "Code Model";
 
   /**
