@@ -100,7 +100,7 @@ async function init(fileManager: FileManager) {
   const middle = document.getElementById("middle")!;
   middle.style.backgroundColor = STYLE.getBackgroundColor();
   const urlPrefix =
-    "https://raw.githubusercontent.com/ArDoCo/TraceView-AI/main/result-ai/";
+    "https://raw.githubusercontent.com/ArDoCo/TraceView-AI/main-ai/result-ai/";
   function truncateId(id: string): string {
     const sep = "tools/descartes/"; // TODO: don't hardcode this
     return id.indexOf(sep) == -1 ? id : id.substring(id.indexOf(sep));
