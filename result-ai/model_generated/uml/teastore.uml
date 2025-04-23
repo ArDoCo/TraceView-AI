@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_VdKBIDVWEeqPG_FgW3bi6Q" name="aName">
-  <packagedElement xmi:type="uml:Component" xmi:id="_lnx1oDVWEeqPG_FgW3bi6Q" name="PersistenceProvider" />
-  <packagedElement xmi:type="uml:Component" xmi:id="_bC13QDVWEeqPG_FgW3bi6Q" name="WebUI" />
-  <packagedElement xmi:type="uml:Component" xmi:id="_yA04AKTKEeqKjI323B3R3w" name="ImageProvider" />
-  <packagedElement xmi:type="uml:Component" xmi:id="_dhM6oDVXEeqPG_FgW3bi6Q" name="Registry" />
-  <packagedElement xmi:type="uml:Component" xmi:id="_AiuxcDVdEeqPG_FgW3bi6Q" name="Auth" />
-  <packagedElement xmi:type="uml:Component" xmi:id="_m3fxEDVWEeqPG_FgW3bi6Q" name="Recommender" />
+  <packagedElement xmi:type="uml:Component" xmi:id="_lnx1oDVWEeqPG_FgW3bi6Q" name="PersistenceProvider">
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_bC13QDVWEeqPG_FgW3bi6Q" name="WebUI">
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_yA04AKTKEeqKjI323B3R3w" name="ImageProvider">
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_dhM6oDVXEeqPG_FgW3bi6Q" name="Registry">
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_AiuxcDVdEeqPG_FgW3bi6Q" name="Auth">
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_m3fxEDVWEeqPG_FgW3bi6Q" name="Recommender">
+  </packagedElement>
 </uml:Model>
